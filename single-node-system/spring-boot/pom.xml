@@ -9,13 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>single-node-system</artifactId>
+    <artifactId>spring-boot</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>spring-boot</module>
-        <module>juc</module>
-        <module>cache</module>
-    </modules>
 
 </project>

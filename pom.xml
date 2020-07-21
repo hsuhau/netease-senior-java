@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>single-node-system</module>
+        <module>distributed-system</module>
     </modules>
 
     <properties>

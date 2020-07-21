@@ -1,4 +1,4 @@
-package com.hsuhau.neteaseseniorjava.singlenodesystem;
+package com.hsuhau.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
