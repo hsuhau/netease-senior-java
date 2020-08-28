@@ -25,13 +25,12 @@
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
-      <version>1.9.6</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
