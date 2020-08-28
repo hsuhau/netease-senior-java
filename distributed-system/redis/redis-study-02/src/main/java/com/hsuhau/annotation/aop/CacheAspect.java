@@ -18,6 +18,9 @@ import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Method;
 
+/**
+ * cache注解，AOP实现
+ */
 @Aspect
 @Component
 public class CacheAspect {
