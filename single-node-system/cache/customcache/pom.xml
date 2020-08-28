@@ -11,6 +11,10 @@
 
     <artifactId>customcache</artifactId>
 
+    <properties>
+        <start-class>com.hsuhau.CustomCacheApplication</start-class>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -25,5 +29,6 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.9.5</version>
         </dependency>
+        
     </dependencies>
 </project>
