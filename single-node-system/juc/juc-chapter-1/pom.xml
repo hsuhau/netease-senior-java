@@ -9,8 +9,30 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hsuhau.juc</groupId>
+    <groupId>com.hsuhau</groupId>
     <artifactId>juc-chapter-1</artifactId>
 
+    <properties>
+        <start-class>com.hsuhau.JUCChapter1Application</start-class>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
