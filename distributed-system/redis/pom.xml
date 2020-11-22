@@ -19,7 +19,9 @@
 
     <modules>
 
-        <module>redis-chapter-1</module>
+        <module>redis-study-01</module>
+        <module>redis-study-02</module>
+        <module>redis-study-03</module>
 
     </modules>
 </project>

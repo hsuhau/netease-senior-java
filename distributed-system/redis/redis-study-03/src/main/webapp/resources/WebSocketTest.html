@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名直播间</title>
+</head>
+<body>
+<script type="text/javascript">
+    var currentRoom; // 当前直播间
+    var t1; // 定时刷新直播间信息
+
+    // 1.进入房间
+    function inRoom(userId, score, roomId) {
+        document.getElementById('responseText').value = ""; // 清空公屏
+        socket = new WebSocket("ws://localhost:9003/redis-study-03/ws/chat?userId=" + userId + "&score=" + score + "&roomId=" + roomId);
+        socket.onmessage = function (event) {
+            var ta = document.getElementById('responseText');
+            ta.value = ta.value + '/n' + event.data;
+        };
+        socket.onopen = function (event) {
+            var ta = document.getElementById('responseText');
+            ta.value = "Web Socket Opened!";
+            t1 = window.setInterval(refresh, 3000); // 开启3秒定时刷新
+        };
+
+        socket.onclose = function (event) {
+            var ta = document.getElementById('responseText');
+            ta.value = ta.value + "Web Socket Closed";
+            window.clearInterval(t1); // 关闭定时刷新
+        };
+    }
+
+    // 2.发消息
+    function send(message) {
+        if (!window.WebSocket) {
+            return;
+        }
+        if (WebSocket.OPEN === socket.readyState) {
+            socket.send(message);
+        } else {
+            alert('The socket is not open.');
+        }
+    }
+
+    // 3.刷新直播间人数
+    function refresh() {
+        var ajax = new XMLHttpRequest();
+        ajax.open('get', 'redis-study-03/chat/roomInfo?roomId=' + currentRoom);
+        ajax.send();
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4 && ajax.status === 200) {
+                console.log(ajax.responseText);
+                document.getElementById('roomInfo').html = ajax.responseText;
+            }
+        };
+    }
+</script>
+
+<form onsubmit="return false;">
+    <input type="text" name="userId" value="输入你的ID"/>
+    <input type="text" name="score" value="输入你的等级"/>
+    <h3>-------大厅------</h3>
+    选择直播间：
+    <select id="room">
+        <option value="1001">##直播秀1</option>
+        <option value="1002">##直播秀2</option>
+        <option value="1003">##直播秀3</option>
+    </select>
+    <input type="button" value="进入房间"
+           onclick="inRoom(this.form.userId.value, this.form.score.value, this.form.room.value)"/>
+
+    <h3>-------发消息------</h3>
+    <input type="text" name="message" value="Hello, World!">
+
+
+</form>
+</body>
+</html>

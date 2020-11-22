@@ -1,7 +1,6 @@
 package com.hsuhau.config;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
-import com.hsuhau.pojo.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
@@ -42,7 +41,7 @@ public class RedisConfig {
     @Bean
     public RedisTemplate redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate redisTemplate = new RedisTemplate();
-        RedisSerializer redisSerializer = new FastJsonRedisSerializer(User.class);
+        RedisSerializer redisSerializer = new FastJsonRedisSerializer(Object.class);
         redisTemplate.setDefaultSerializer(redisSerializer);
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         return redisTemplate;
