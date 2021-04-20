@@ -3,19 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>distributed-system</artifactId>
+        <artifactId>high-concurrency-optimization</artifactId>
         <groupId>com.hsuhau</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>database-tuning</artifactId>
-
-    <description>第四章 数据存储层优化（上）-数据库优化</description>
+    <artifactId>juc</artifactId>
 
     <packaging>pom</packaging>
 
+    <description>第三节 J.U.C并发编程包详解</description>
+
     <modules>
-        <module>sharding-jdbc-study</module>
+        <module>j.u.c-chapter-1</module>
     </modules>
+
 </project>
