@@ -21,8 +21,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>redis-study-01</module>
-        <module>redis-study-02</module>
-        <module>redis-study-03</module>
+        <module>redis-01</module>
+        <module>redis-02</module>
+        <module>redis-03</module>
     </modules>
 </project>
