@@ -3,21 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>single-node-system</artifactId>
+        <artifactId>high-concurrency-optimization</artifactId>
         <groupId>com.hsuhau</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>high-concurrency-optimization</artifactId>
+    <artifactId>java-util-concurrent</artifactId>
 
     <packaging>pom</packaging>
 
-    <description>第四章 单系统高并发优化</description>
+    <description>第三节 J.U.C并发编程包详解</description>
 
     <modules>
-        <module>cache-optimization</module>
-        <module>java-util-concurrent</module>
+        <module>java-util-concurrent-01</module>
     </modules>
 
 </project>

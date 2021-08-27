@@ -16,6 +16,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sharding-jdbc-study</module>
+        <module>sharding-jdbc</module>
     </modules>
 </project>
