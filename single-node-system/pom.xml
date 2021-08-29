@@ -21,6 +21,9 @@
         <module>backend-interface-development</module>
         <module>application-server-optimization</module>
         <module>framework-source-code</module>
+        <module>netty-network-framework</module>
+        <module>java-core-fundamentals</module>
+        <module>page-development-template-engine</module>
     </modules>
 
 </project>

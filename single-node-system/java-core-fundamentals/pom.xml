@@ -9,13 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-source-code</artifactId>
+    <artifactId>java-core-fundamentals</artifactId>
 
     <packaging>pom</packaging>
 
-    <description>第五章 【拓展进阶（上）】框架源码</description>
-    <modules>
-        <module>mybatis</module>
-    </modules>
+    <description>第二章 Java核心基础</description>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+    </properties>
 
 </project>
