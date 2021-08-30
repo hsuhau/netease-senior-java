@@ -1,4 +1,4 @@
-package com.hsuhau.mybatis.mapper;
+package com.hsuhau.mybatis.dao;
 
 import com.hsuhau.common.entity.User;
 

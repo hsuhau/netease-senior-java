@@ -17,10 +17,9 @@ import java.util.concurrent.locks.LockSupport;
  * @date 2020/7/20 16:55
  */
 public class ReentrantDemo3 implements Lock {
+    private final LinkedBlockingQueue<Thread> waiters = new LinkedBlockingQueue<>();
     AtomicReference<Thread> owner = new AtomicReference<>();
     AtomicInteger count = new AtomicInteger();
-    private final LinkedBlockingQueue<Thread> waiters = new LinkedBlockingQueue<>();
-
 
     /**
      * Acquires the lock.

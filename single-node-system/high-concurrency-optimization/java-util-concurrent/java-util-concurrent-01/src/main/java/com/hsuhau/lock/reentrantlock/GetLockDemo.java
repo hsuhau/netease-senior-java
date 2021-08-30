@@ -35,7 +35,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *         <td></td>
  *     </tr>
  * </table>
- *
+ * <p>
  * 结论：
  * 1、lock()最常用；
  * 2、lockInterruptibly()方法一般最昂贵，有的impl可能没有实现lockInterruptibly()，

@@ -8,4 +8,5 @@ create table user
     gender varchar(10) not null
 );
 
-INSERT INTO mybatis.user (id, name, age, gender) VALUES (1, 'hsuhau', 24, 'man');
+INSERT INTO mybatis.user (id, name, age, gender)
+VALUES (1, 'hsuhau', 24, 'man');

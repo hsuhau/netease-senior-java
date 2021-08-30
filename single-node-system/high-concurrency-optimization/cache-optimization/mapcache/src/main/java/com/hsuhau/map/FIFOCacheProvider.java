@@ -51,20 +51,17 @@ import java.util.concurrent.TimeUnit;
  */
 public class FIFOCacheProvider {
     /**
-     * 存放缓存的集合
-     */
-    private final Map<String, CacheData> cacheDatas;
-
-    /**
      * 定时器线程池，用于清除过期的缓存
      */
     private final static ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(5);
-
     /**
      * FIFO
      */
     private static int MAX_CACHE_SIZE = 0;
-
+    /**
+     * 存放缓存的集合
+     */
+    private final Map<String, CacheData> cacheDatas;
     /**
      * 填充因子
      */
@@ -163,21 +160,6 @@ public class FIFOCacheProvider {
     }
 
     /**
-     * 缓存实体类
-     */
-    class CacheData {
-        // 缓存数据
-        private final Object data;
-        // 失效时间
-        public Long expire;
-
-        public CacheData(Object data, Long expire) {
-            this.data = data;
-            this.expire = expire;
-        }
-    }
-
-    /**
      * Returns a string representation of the object. In general, the
      * {@code toString} method returns a string that
      * "textually represents" this object. The result should
@@ -205,5 +187,20 @@ public class FIFOCacheProvider {
             stringBuffer.append(entry.getKey()).append(" = ").append(entry.getValue().data).append("\n");
         }
         return stringBuffer.toString();
+    }
+
+    /**
+     * 缓存实体类
+     */
+    class CacheData {
+        // 缓存数据
+        private final Object data;
+        // 失效时间
+        public Long expire;
+
+        public CacheData(Object data, Long expire) {
+            this.data = data;
+            this.expire = expire;
+        }
     }
 }

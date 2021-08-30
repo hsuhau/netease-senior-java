@@ -30,7 +30,7 @@ public class ChatController {
         Set range = redisTemplate.opsForZSet().reverseRangeByScore("roominfo::" + roomId, 10, 5, 0, 2);
         for (Object o : range) {
             System.out.println(o.toString());
-            
+
         }
 
         return "sum: " + count;

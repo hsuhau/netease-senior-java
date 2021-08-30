@@ -11,11 +11,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RedisTest{
+public class RedisTest {
     @Autowired
     private UserService userService;
+
     @Test
-    public void test(){
+    public void test() {
         String userId = "hello";
         User user = userService.findUserById(userId);
         System.out.println(JSONObject.toJSON(user));

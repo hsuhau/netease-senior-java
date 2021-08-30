@@ -48,7 +48,7 @@ public class ReadWriteLock {
      * @return
      */
     public boolean tryUnlock(int releases) {
-       return mask.tryUnlock(releases);
+        return mask.tryUnlock(releases);
     }
 
     /**

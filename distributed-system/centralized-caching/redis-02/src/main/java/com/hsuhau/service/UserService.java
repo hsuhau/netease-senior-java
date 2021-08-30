@@ -52,7 +52,7 @@ public class UserService {
      */
     // key = "#userId" key的生成规则
 //    @Cacheable(cacheManager = "cacheManager", value = "user", key = "#userId")
-    @NeteaseCache( value = "user", key = "#userId")
+    @NeteaseCache(value = "user", key = "#userId")
     public User findUserByIdAnnotation(String userId) {
         System.out.println("使用了注解实现");
         String sql = "select * from t_user where uid=?";

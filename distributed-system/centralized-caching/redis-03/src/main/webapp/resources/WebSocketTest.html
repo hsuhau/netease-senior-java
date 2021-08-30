@@ -57,8 +57,8 @@
 </script>
 
 <form onsubmit="return false;">
-    <input type="text" name="userId" value="输入你的ID"/>
-    <input type="text" name="score" value="输入你的等级"/>
+    <input name="userId" type="text" value="输入你的ID"/>
+    <input name="score" type="text" value="输入你的等级"/>
     <h3>-------大厅------</h3>
     选择直播间：
     <select id="room">
@@ -66,11 +66,11 @@
         <option value="1002">##直播秀2</option>
         <option value="1003">##直播秀3</option>
     </select>
-    <input type="button" value="进入房间"
-           onclick="inRoom(this.form.userId.value, this.form.score.value, this.form.room.value)"/>
+    <input onclick="inRoom(this.form.userId.value, this.form.score.value, this.form.room.value)" type="button"
+           value="进入房间"/>
 
     <h3>-------发消息------</h3>
-    <input type="text" name="message" value="Hello, World!">
+    <input name="message" type="text" value="Hello, World!">
 
 
 </form>

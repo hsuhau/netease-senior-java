@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -27,13 +28,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
         <junit.jupiter.version>5.6.0-RC1</junit.jupiter.version>
         <mysql-connector.version>8.0.18</mysql-connector.version>
         <druid.version>1.1.22</druid.version>
         <lombok.version>1.18.10</lombok.version>
-        <sharding-jdbc.spring.boot.version>3.1.0</sharding-jdbc.spring.boot.version>
+        <sharding-jdbc-spring-boot.version>3.1.0</sharding-jdbc-spring-boot.version>
         <spring-boot-dependencies.version>2.3.1.RELEASE</spring-boot-dependencies.version>
         <spring-data-redis.version>2.3.3.RELEASE</spring-data-redis.version>
         <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
@@ -44,7 +45,6 @@
         <fastjson.version>1.2.73</fastjson.version>
         <lettuce-core.version>6.0.0.RC1</lettuce-core.version>
         <hutool.version>5.3.5</hutool.version>
-        <kotlin.version>1.5.30</kotlin.version>
         <dom4j.version>1.6.1</dom4j.version>
     </properties>
 
@@ -109,7 +109,7 @@
             <dependency>
                 <groupId>io.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-                <version>${sharding-jdbc.spring.boot.version}</version>
+                <version>${sharding-jdbc-spring-boot.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
@@ -133,54 +133,14 @@
                 <version>${dom4j.version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <jvmTarget>1.8</jvmTarget>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Data
 public class User implements Serializable {
     private String uid;
-    private String  uname;
+    private String uname;
     private Integer age;
     private String img;
 

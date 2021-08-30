@@ -34,12 +34,12 @@ public class BlockingQueueDemo {
 }
 
 class BlockingQueue {
-    // 容器
-    List<Object> list = new ArrayList<>();
     private final Lock lock = new ReentrantLock();
     private final Condition putCondition = lock.newCondition();
     private final Condition takeCondition = lock.newCondition();
     private final int length;
+    // 容器
+    List<Object> list = new ArrayList<>();
 
     public BlockingQueue(int length) {
         this.length = length;

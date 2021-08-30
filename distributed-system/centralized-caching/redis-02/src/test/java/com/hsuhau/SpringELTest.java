@@ -8,6 +8,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 /**
  * SpringEL表达式，测试类
+ *
  * @author hsuhau
  * @date 2020/8/28 19:13
  */
@@ -15,7 +16,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 //@RunWith(SpringRunner.class)
 public class SpringELTest {
     @Test
-    public void test(){
+    public void test() {
         String demo = "'hello:' + #userId";
 
         // 1.创建解析器

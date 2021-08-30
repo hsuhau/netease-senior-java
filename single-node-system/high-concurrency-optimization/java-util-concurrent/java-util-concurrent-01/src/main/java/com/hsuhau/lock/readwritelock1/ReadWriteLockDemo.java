@@ -36,31 +36,6 @@ public class ReadWriteLockDemo {
 
     ReadWriteLock rwLock = new ReentrantReadWriteLock();
 
-
-    public void read() {
-        rwLock.readLock().lock();
-        long a = 1;
-        rwLock.readLock().unlock();
-    }
-
-    public void write() {
-        rwLock.writeLock().lock();
-        i++;
-        rwLock.writeLock().unlock();
-    }
-
-    /*public void read() {
-        lock.lock();
-        long a = 1;
-        lock.unlock();
-    }
-
-    public void write() {
-        lock.lock();
-        i++;
-        lock.unlock();
-    }*/
-
     public static void main(String[] args) throws InterruptedException {
         final ReadWriteLockDemo readWriteLockDemo = new ReadWriteLockDemo();
         long startTime = System.currentTimeMillis();
@@ -79,6 +54,30 @@ public class ReadWriteLockDemo {
             long endTime = System.currentTimeMillis();
             System.out.println("耗时：" + (endTime - startTime));
         }
+    }
+
+    public void read() {
+        rwLock.readLock().lock();
+        long a = 1;
+        rwLock.readLock().unlock();
+    }
+
+    /*public void read() {
+        lock.lock();
+        long a = 1;
+        lock.unlock();
+    }
+
+    public void write() {
+        lock.lock();
+        i++;
+        lock.unlock();
+    }*/
+
+    public void write() {
+        rwLock.writeLock().lock();
+        i++;
+        rwLock.writeLock().unlock();
     }
 
 }

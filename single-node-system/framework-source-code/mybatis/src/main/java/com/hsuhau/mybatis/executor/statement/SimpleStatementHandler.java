@@ -1,7 +1,7 @@
 package com.hsuhau.mybatis.executor.statement;
 
-import com.hsuhau.mybatis.utils.CommonUtis;
 import com.hsuhau.mybatis.mapping.MappedStatement;
+import com.hsuhau.mybatis.utils.CommonUtis;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,7 +43,7 @@ public class SimpleStatementHandler implements StatementHandler {
         Matcher matcher = param_pattern.matcher(source);
         return matcher.replaceAll("?");
     }
-    
+
     @Override
     public PreparedStatement prepare(Connection paramConnection)
             throws SQLException {

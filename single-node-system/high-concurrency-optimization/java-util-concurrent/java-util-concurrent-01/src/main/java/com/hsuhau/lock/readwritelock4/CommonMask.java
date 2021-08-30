@@ -12,26 +12,12 @@ import java.util.concurrent.locks.LockSupport;
  * @date 2020/7/20 19:42
  */
 public class CommonMask {
-    volatile AtomicInteger readCount = new AtomicInteger(0);
-    AtomicInteger writeCount = new AtomicInteger(0);
-
-    // 独占锁
-    AtomicReference<Thread> owner = new AtomicReference<>();
-
     // 等待队列
     public volatile LinkedBlockingQueue<WaitNode> waiters = new LinkedBlockingQueue<>();
-
-    class WaitNode {
-        int type = 0; // 0 为想获取独占锁的线程 1 为想获取共享锁的线程
-        Thread thread = null;
-        int arg = 0;
-
-        public WaitNode(int type, Thread thread, int arg) {
-            this.type = type;
-            this.thread = thread;
-            this.arg = arg;
-        }
-    }
+    volatile AtomicInteger readCount = new AtomicInteger(0);
+    AtomicInteger writeCount = new AtomicInteger(0);
+    // 独占锁
+    AtomicReference<Thread> owner = new AtomicReference<>();
 
     /**
      * 获取独占锁
@@ -218,6 +204,18 @@ public class CommonMask {
             if (readCount.compareAndSet(rc, nextc)) {
                 return nextc == 0;
             }
+        }
+    }
+
+    class WaitNode {
+        int type = 0; // 0 为想获取独占锁的线程 1 为想获取共享锁的线程
+        Thread thread = null;
+        int arg = 0;
+
+        public WaitNode(int type, Thread thread, int arg) {
+            this.type = type;
+            this.thread = thread;
+            this.arg = arg;
         }
     }
 }

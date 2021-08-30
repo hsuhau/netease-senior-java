@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.UUID;
 
-public class FIFOCacheProviderTest  {
+public class FIFOCacheProviderTest {
 
     @Test
     public void test() throws Exception {
