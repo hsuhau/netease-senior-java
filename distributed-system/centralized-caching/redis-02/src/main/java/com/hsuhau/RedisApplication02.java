@@ -28,8 +28,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/7/18 15:48
  */
 @SpringBootApplication
-public class RedisStudy02Application {
+public class RedisApplication02 {
     public static void main(String[] args) {
-        SpringApplication.run(RedisStudy02Application.class, args);
+        SpringApplication.run(RedisApplication02.class, args);
     }
 }

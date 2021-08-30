@@ -1,14 +1,14 @@
 package com.hsuhau.jdbc;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hsuhau.bean.User;
+import com.hsuhau.common.entity.User;
 
 import java.sql.*;
 
 /**
  * @author hsuhau
  */
-public class JDBCTest {
+public class JdbcTest {
     public static void main(String[] args) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -17,7 +17,7 @@ public class JDBCTest {
             // 加载数据库驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
             // 建立数据库连接serverTimezone
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8&serverTimezone=Asia/Shanghai", "root", "waibibabo");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/com.hsuhau.mybatis?characterEncoding=utf-8&serverTimezone=Asia/Shanghai", "root", "waibibabo");
             // sql语句
             String sql = "select * from user where name = ?";
             // 预处理statement

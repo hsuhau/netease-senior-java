@@ -16,7 +16,7 @@
   <name>redis-02</name>
 
   <properties>
-    <start-class>com.hsuhau.RedisStudy02Application</start-class>
+    <start-class>com.hsuhau.RedisApplication02</start-class>
   </properties>
 
   <dependencies>

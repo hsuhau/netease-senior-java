@@ -25,11 +25,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 组件扫描和自动装配，用来指定扫描容器的范围
  *
  * @author hsuhau
- * @date 2020/8/29 17:10
+ * @date 2020/7/18 15:48
  */
 @SpringBootApplication
-public class RedisStudy03Application {
+public class RedisApplication01 {
     public static void main(String[] args) {
-        SpringApplication.run(RedisStudy03Application.class, args);
+        SpringApplication.run(RedisApplication01.class, args);
     }
 }

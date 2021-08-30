@@ -1,4 +1,4 @@
-package com.hsuhau.bean;
+package com.hsuhau.common.entity;
 
 import lombok.Data;
 

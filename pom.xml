@@ -33,10 +33,19 @@
         <mysql-connector.version>8.0.18</mysql-connector.version>
         <druid.version>1.1.22</druid.version>
         <lombok.version>1.18.10</lombok.version>
+        <sharding-jdbc.spring.boot.version>3.1.0</sharding-jdbc.spring.boot.version>
+        <spring-boot-dependencies.version>2.3.1.RELEASE</spring-boot-dependencies.version>
+        <spring-data-redis.version>2.3.3.RELEASE</spring-data-redis.version>
         <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
-        <!--        <logback.classic.version>1.2.3</logback.classic.version>-->
+        <mybatis.version>3.5.7</mybatis.version>
+        <jedis.version>3.3.0</jedis.version>
+        <aspectjweaver.version>1.9.6</aspectjweaver.version>
+        <commons-dbutils.version>1.7</commons-dbutils.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <lettuce-core.version>6.0.0.RC1</lettuce-core.version>
         <hutool.version>5.3.5</hutool.version>
-        <kotlin.version>1.4.0</kotlin.version>
+        <kotlin.version>1.5.30</kotlin.version>
+        <dom4j.version>1.6.1</dom4j.version>
     </properties>
 
     <dependencyManagement>
@@ -44,7 +53,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.1.RELEASE</version>
+                <version>${spring-boot-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -53,20 +62,20 @@
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
-                <version>3.3.0</version>
+                <version>${jedis.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.21</version>
+                <version>${mysql-connector.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.12</version>
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -74,40 +83,54 @@
             <dependency>
                 <groupId>io.lettuce</groupId>
                 <artifactId>lettuce-core</artifactId>
-                <version>6.0.0.RC1</version>
+                <version>${lettuce-core.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.73</version>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
-                <version>1.9.6</version>
+                <version>${aspectjweaver.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-redis</artifactId>
-                <version>2.3.3.RELEASE</version>
+                <version>${spring-data-redis.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-                <version>3.1.0</version>
+                <version>${sharding-jdbc.spring.boot.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
             <dependency>
                 <groupId>commons-dbutils</groupId>
                 <artifactId>commons-dbutils</artifactId>
-                <version>1.7</version>
+                <version>${commons-dbutils.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
             </dependency>
 
         </dependencies>
